@@ -103,6 +103,7 @@ if (gameState == "win") {
   }
   if (gameState == "dead2") {
     alert("The minotaur finds you and attacks. You try to get away, but the minotaur chases you down and tramples you. Better luck next time!  Reload the page to play again.");
+    player.y = displayHeight - 90;
     player.velocityX = 0;
     player.velocityY = 0;
     gameState = "end"
