@@ -95,11 +95,16 @@ if (gameState == "win") {
     gameState = "dead2"
   }
   if (gameState == "dead") {
-    alert("The hellhound finds you and attacks. You try to get away, but the hellhound chases you down and eats you. Better luck next time!  Reload the page, then cut and paste the link in the search engine to play again.");
-    gameState = "end2"
+    alert("The hellhound finds you and attacks. You try to get away, but the hellhound chases you down and eats you. Better luck next time!  Reload the page to play again.");
+    player.y = displayHeight - 90;
+    player.velocityX = 0;
+    player.velocityY = 0;
+    gameState = "end"
   }
   if (gameState == "dead2") {
-    alert("The minotaur finds you and attacks. You try to get away, but the minotaur chases you down and tramples you. Better luck next time!  Reload the page, then cut and paste the link in the search engine to play again.");
-    gameState = "end3"
+    alert("The minotaur finds you and attacks. You try to get away, but the minotaur chases you down and tramples you. Better luck next time!  Reload the page to play again.");
+    player.velocityX = 0;
+    player.velocityY = 0;
+    gameState = "end"
   }
 } 
